@@ -1,2 +1,1 @@
-# PythonTask
-Graph Algorithms
+# GrafPy
