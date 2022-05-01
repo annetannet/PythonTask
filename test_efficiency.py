@@ -26,14 +26,14 @@ def speedDfs(graph, start):
 def speedBfs(a, start):
     return bfs.BFS(a, start)
 @logging
-def speedTop_sort(*a):
-    return top_sort.TopologicalSort(*a)
+def speedTop_sort(a):
+    return top_sort.TopologicalSort(a)
 @logging
-def speedTop_sortAnother(*a):
-    return bestTopSort.topological_sort(*a)
+def speedTop_sortAnother(a):
+    return bestTopSort.topological_sort(a)
 @logging
-def speedDikstra(*a):
-    return dikstra.Dikstra(*a)
+def speedDikstra(a, start):
+    return dikstra.Dijkstra(a, start)
 
 if __name__ == '__main__':
     a = [[1, 2, 3, 4], [4], [], [], []]
@@ -55,3 +55,6 @@ if __name__ == '__main__':
     print("Topological sort алгоритм основаный на DFS")
     print("Time: ", end = ' ')
     speedTop_sortAnother(a)
+    print("Диикстра sort алгоритм основаный на DFS")
+    print("Time: ", end = ' ')
+    speedDikstra([[(1,1),(2,2)],[(3,3)],[(4,3)],[]], 0)
