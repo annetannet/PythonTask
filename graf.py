@@ -1,5 +1,6 @@
 import bfs
 import dfs
+import bestTopSort
 
 if __name__ == '__main__':
     print("Введите количество вершин")
@@ -8,5 +9,5 @@ if __name__ == '__main__':
     for i in range(n):
         f, s = map(int, input().split())
         g[f].append(s)
-    k = dfs.topological_sort(g)
+    k = bestTopSort.topological_sort(g)
     print(*k)
