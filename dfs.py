@@ -5,6 +5,9 @@ def DFS(graph, node):
     :param node: текущая вершина
     :return: упорядоченный список вершин, по которому алгоритм проходит граф
     """
+    # Проверка, не пустой ли граф
+    if len(graph) == 0:
+        return []
     used = {}  # Словарь, ключи которого - вершины,
     # Значение ключа True, если вершину посетили
     # False в противном случае
@@ -12,6 +15,7 @@ def DFS(graph, node):
 
     def dfs(graph, node):  # Сам алгоритм поиска в глубину
 
+        # Проверка корректности номера вершины
         if node >= len(graph):
             print(f'The node {node} out of graph')
             return []
@@ -24,7 +28,3 @@ def DFS(graph, node):
 
     dfs(graph, node)
     return ans
-
-
-if __name__ == '__main__':
-    print(DFS([[1, 2], [3, 4], [1], [1]], 0))
